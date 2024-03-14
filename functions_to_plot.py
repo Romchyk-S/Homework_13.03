@@ -55,81 +55,81 @@ def func_3():
     
     return x, y, label, title
 
-# def func_4():
+def func_4():
     
-#     x = np.arange(-10, 10, 0.1)
+    x = np.arange(-10, 10, 0.1)
     
-#     label = "$x_1 = 4 \ \ x_2 = 2$"
+    label = "$x_1 = 4 \ \ x_2 = 2$"
     
-#     title = "$log_{1/2} (x^2-6x+9)$"
+    title = "$log_{1/2} (x^2-6x+9)$"
     
-#     y = (np.piecewise(x, [(x < 2.99), ((x >= 2.99) & (x <= 3.01)), (x>3.01)],
-#                           [lambda x: np.emath.logn(1/2, x**2-6*x+9), np.nan, lambda x: np.emath.logn(1/2, x**2-6*x+9)]))
+    y = (np.piecewise(x, [(x < 2.99), ((x >= 2.99) & (x <= 3.01)), (x>3.01)],
+                          [lambda x: np.emath.logn(1/2, x**2-6*x+9), np.nan, lambda x: np.emath.logn(1/2, x**2-6*x+9)]))
     
-#     return x, y, label, title
+    return x, y, label, title
 
-# def func_5():
+def func_5():
     
-#     label = "$x=\pi_n$"
+    label = "$x=\pi_n$"
     
-#     title = "$sin^2(x)$"
+    title = "$sin^2(x)$"
     
-#     x = np.arange(-4*np.pi, 4*np.pi, 0.1)
+    x = np.arange(-4*np.pi, 4*np.pi, 0.1)
     
-#     return x, np.sin(x)**2, label, title
+    return x, np.sin(x)**2, label, title
 
-# def func_6():
+def func_6():
     
-#     # здається, не працює для проміжків із від'ємними значеннями x.
+    # здається, не працює для проміжків із від'ємними значеннями x.
     
-#     a = 0
+    a = 0
     
-#     b = 4*np.pi
+    b = 4*np.pi
     
-#     x = np.arange(a, b, 0.01)
+    x = np.arange(a, b, 0.01)
     
-#     period = np.pi
+    period = np.pi
 
-#     zero_left = (np.pi-0.01)
+    zero_left = (np.pi-0.01)
     
-#     zero_right = (np.pi+0.01)
+    zero_right = (np.pi+0.01)
    
-#     x_pieces = fp.find_x_piecesewise_for_periodic_functions(a, b, period, zero_left, zero_right, x)
+    x_pieces = fp.find_x_piecesewise_for_periodic_functions(a, b, period, zero_left, zero_right, x)
     
-#     y_pieces = [np.nan, lambda x: np.sin(x) + (1/np.sin(x))]
+    y_pieces = [np.nan, lambda x: np.sin(x) + (1/np.sin(x))]
 
-#     y = (np.piecewise(x, x_pieces, y_pieces))
+    y = (np.piecewise(x, x_pieces, y_pieces))
     
-#     label = "$no \ zeros$"
+    label = "$no \ zeros$"
     
-#     title = "$sinx + 1/sinx$"
+    title = "$sinx + 1/sinx$"
 
-#     return x, y, label, title
+    return x, y, label, title
 
-# def func_7():
+def func_7():
     
-#     # здається, не працює для проміжків із від'ємними значеннями x.
+    # здається, не працює для проміжків із від'ємними значеннями x.
     
-#     a = 0
+    a = 0
     
-#     b = 4*np.pi
+    b = 4*np.pi
     
-#     x = np.arange(a, b, 0.01)
+    x = np.arange(a, b, 0.01)
     
-#     period = np.pi
+    period = np.pi
 
-#     zero_left = (np.pi-0.01)
+    zero_left = (np.pi-0.01)
     
-#     zero_right = (np.pi+0.01)
+    zero_right = (np.pi+0.01)
    
-#     x_pieces = fp.find_x_piecesewise_for_periodic_functions(a, b, period, zero_left, zero_right, x)
+    x_pieces = fp.find_x_piecesewise_for_periodic_functions(a, b, period, zero_left, zero_right, x)
     
-#     y_pieces = [np.nan, lambda x: np.sin(x) - (1/np.sin(x))]
+    y_pieces = [np.nan, lambda x: np.sin(x) - (1/np.sin(x))]
 
-#     y = (np.piecewise(x, x_pieces, y_pieces))
+    y = (np.piecewise(x, x_pieces, y_pieces))
     
-#     label = "\frac{\pi}{2} + \pi_n$"
+    label = "\frac{\pi}{2} + \pi_n$"
     
-#     title = "$sinx - 1/sinx$"
+    title = "$sinx - 1/sinx$"
   
-#     return x, y, label, title
+    return x, y, label, title
