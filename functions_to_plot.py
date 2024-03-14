@@ -80,9 +80,7 @@ def func_5():
 
 def func_6():
     
-    # здається, не працює для проміжків із від'ємними значеннями x.
-    
-    a = 0
+    a = -4*np.pi
     
     b = 4*np.pi
     
@@ -100,6 +98,8 @@ def func_6():
 
     y = (np.piecewise(x, x_pieces, y_pieces))
     
+    y[:-1][np.abs(np.diff(y)) > 50] = np.nan
+    
     label = "$no \ zeros$"
     
     title = "$sinx + 1/sinx$"
@@ -108,9 +108,7 @@ def func_6():
 
 def func_7():
     
-    # здається, не працює для проміжків із від'ємними значеннями x.
-    
-    a = 0
+    a = -4*np.pi
     
     b = 4*np.pi
     
@@ -126,9 +124,11 @@ def func_7():
     
     y_pieces = [np.nan, lambda x: np.sin(x) - (1/np.sin(x))]
 
-    y = (np.piecewise(x, x_pieces, y_pieces))
+    y = np.piecewise(x, x_pieces, y_pieces)
     
-    label = "\frac{\pi}{2} + \pi_n$"
+    y[:-1][np.abs(np.diff(y)) > 50] = np.nan
+    
+    label = "$\pi/2 + \pi_n$"
     
     title = "$sinx - 1/sinx$"
   

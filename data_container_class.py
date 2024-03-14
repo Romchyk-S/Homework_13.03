@@ -8,6 +8,9 @@ Created on Tue Mar  5 16:27:17 2024
 
 import matplotlib.pyplot as plt
 
+import numpy as np
+    
+    
 
 class DataContainer:
  
@@ -38,7 +41,28 @@ class DataContainer:
         
         ax.set_title(title)
         
-        ax.text(self.x[-1]/2, self.y[1], text, fontsize = 14)
+        x_i = -1
+        
+        a = self.x[x_i]/2
+        
+        while np.isnan(a):
+            
+            a = self.x[x_i]/2
+            
+            x_i -= 1
+            
+            
+        y_i = 1
+        
+        b = self.y[y_i]
+        
+        while np.isnan(b):
+            
+            b = self.y[y_i]
+            
+            y_i += 1
+        
+        ax.text(a, b, text, fontsize = 14)
         
         ax.legend()
         
