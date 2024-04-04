@@ -9,6 +9,8 @@ import numpy as np
 
 import find_x_for_piecewise as fp
 
+# function analysis available here: https://colab.research.google.com/drive/1uT1Fb-eMM_UFerrJPusZG8uCaXDUU53G
+
 def func_0():
     
     x = np.arange(-10, 10, 0.1)
